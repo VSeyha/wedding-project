@@ -131,11 +131,11 @@ function updateTimer() {
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   document.getElementById("timer").innerHTML = `
-    <div class="time-item">${days}<span>ថ្ងៃ</span></div>
-    <div class="time-item">${hours}<span>ម៉ោង</span></div>
-    <div class="time-item">${minutes}<span>នាទី</span></div>
-    <div class="time-item">${seconds}<span>វិនាទី</span></div>
-  `;
+  <div class="time-item">${toKhmerNumber(days)}<span>ថ្ងៃ</span></div>
+  <div class="time-item">${toKhmerNumber(hours)}<span>ម៉ោង</span></div>
+  <div class="time-item">${toKhmerNumber(minutes)}<span>នាទី</span></div>
+  <div class="time-item">${toKhmerNumber(seconds)}<span>វិនាទី</span></div>
+`;
 }
 
 const timer = setInterval(updateTimer, 1000);
@@ -220,9 +220,37 @@ rsvpForm.addEventListener("submit", async e => {
 
     rsvpForm.reset();
     successMessage.style.display = "block";
+    successMessage.classList.add("show");
     successMessage.innerHTML = "សូមអរគុណ! យើងបានផ្ញើ QR Code ទៅកាន់ Email របស់អ្នកហើយ។";
   } catch (err) {
     console.error("RSVP Error:", err);
     alert("មានបញ្ហាក្នុងការផ្ញើ RSVP, សូមព្យាយាមម្តងទៀត។");
   }
+});
+
+
+const navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.transition = "all 1s ease";
+      entry.target.style.opacity = 1;
+      entry.target.style.transform = "translateY(0)";
+    }
+  });
+}, { threshold: 0.2 });
+
+document.querySelectorAll("section").forEach(section => {
+  section.style.opacity = 0;
+  section.style.transform = "translateY(40px)";
+  observer.observe(section);
 });
