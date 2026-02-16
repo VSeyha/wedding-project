@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>សំបុត្រអាពាហ៍ពិពាហ៍</title>
+
+  <!-- Google Khmer Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Hanuman:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <section id="home">
+      <header> 
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#couple">Couple</a></li>
+            <li><a href="#event">Event</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#rsvp">RSVP</a></li>
+            <li><a href="#footer">Footer</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="overlay">
+        <h1>សិរីមង្គលអាពាហ៍ពិពាហ៍</h1>
+        <h2> <span class="groom-name"></span>  &   <span class="bride-name"></span></h2>
+        <h2 class="guest_name">​​</h2>
+        <p class="event_date"></p>
+      </div>
+    </section>
+
+    <section id="couple">
+      <div class="couple-container">
+        
+        <h2 class="section-title">គូស្វាមីភរិយា</h2>
+
+        <div class="couple-wrapper">
+          
+          <!-- Groom -->
+          <div class="person fade-in">
+            <div class="image-box">
+              <img src="assets/groom.jpg" alt="Groom">
+            </div>
+            <h3>លោក សេយហា</h3>
+          </div>
+
+          <div class="heart fade-in">❤</div>
+
+          <!-- Bride -->
+          <div class="person fade-in">
+            <div class="image-box">
+              <img src="assets/bride.jpg" alt="Bride">
+            </div>
+            <h3>នាង សុភា</h3>
+          </div>
+
+        </div>
+
+        <!-- Love Story Timeline -->
+        <div class="love-story">
+          <h2 class="section-title">រឿងរ៉ាវស្នេហា</h2>
+
+          <div class="timeline">
+
+            <div class="timeline-item fade-in">
+              <span>2022</span>
+              <p>ជួបគ្នាលើកដំបូង</p>
+            </div>
+
+            <div class="timeline-item fade-in">
+              <span>2023</span>
+              <p>ចាប់ផ្តើមស្នេហា</p>
+            </div>
+
+            <div class="timeline-item fade-in">
+              <span>2025</span>
+              <p>ពិធីស្នេហា និងភ្ជាប់ពាក្យ</p>
+            </div>
+
+            <div class="timeline-item fade-in">
+              <span>2026</span>
+              <p>ថ្ងៃអាពាហ៍ពិពាហ៍</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="event">
+      <div class="event-container">
+
+    <h2 class="section-title">ព្រឹត្តិការណ៍</h2>
+
+    <div class="event-wrapper">
+
+      <!-- Ceremony -->
+      <div class="event-card fade-in">
+        <h3>ពិធីអាពាហ៍ពិពាហ៍</h3>
+        <p class="event-date">
+          ថ្ងៃអាទិត្យ ទី២២ ខែកម្ភៈ ឆ្នាំ២០២៦
+        </p>
+        <p>វេលាម៉ោង ១១:០០ ព្រឹក</p>
+        <p>ទីតាំង៖ ភោជនីយដ្ឋាន XXXXX</p>
+
+        <a href="https://maps.google.com" target="_blank" class="map-btn">
+          មើលទីតាំង
+        </a>
+      </div>
+
+      <!-- Reception -->
+      <div class="event-card fade-in">
+        <h3>ពិធីជប់លៀង</h3>
+        <p class="event-date">
+          ថ្ងៃអាទិត្យ ទី២២ ខែកម្ភៈ ឆ្នាំ២០២៦
+        </p>
+        <p>វេលាម៉ោង ៦:០០ ល្ងាច</p>
+        <p>ទីតាំង៖ សាលពិធី XXXXX</p>
+
+        <a href="https://maps.google.com" target="_blank" class="map-btn">
+          មើលទីតាំង
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Countdown -->
+    <div class="countdown fade-in">
+      <h3>រាប់ថយក្រោយដល់ថ្ងៃអាពាហ៍ពិពាហ៍</h3>
+      <div id="timer" class="timer-box"></div>
+    </div>
+
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="gallery-container">
+        <h2 class="section-title">រូបភាពអនុស្សាវរីយ៍</h2>
+        <div class="gallery-grid" id="galleryGrid"></div>
+      </div>
+    </section>
+
+
+    <section id="rsvp">
+      <div class="rsvp-container">
+        <h1>សេចក្តីថ្លែងអំណរគុណ និងសូមអភ័យទោស</h1>
+        <br>
+        <p>យើងខ្ញុំទាំងពីរ សូមថ្លែងអំណរគុណ យ៉ាងជ្រាលជ្រៅ ចំពោះវត្តមាន ដ៏ឧត្តុង្គឧត្តមរបស់ សម្តេច ឯកឧត្តម លោកជំទាវ លោកអ្នកឧកញ៉ា អ្នកឧកញ៉ា ឧកញ៉ា លោក លោកស្រី អ្នកនាង កញ្ញា ដែលបាន អញ្ជើញចូលរួមជាកិត្តិយស ក្នុងពិធីសិរីសួស្តីអាពាហ៍ពិពាហ៍ របស់យើងខ្ញុំ នាពេលខាងមុខនេះ។ យើងខ្ញុំសូមការខន្តីអភ័យទោស ដែលពុំបានជូនលិខិតអញ្ជើញ ដោយផ្ទាល់ ។ ដោយការវកិច្ចដ៏ខ្ពង់ខ្ពស់ពីយើងខ្ញុំ។</p>
+          <br>
+        <h2 class="section-title">បញ្ជាក់ការចូលរួម</h2>
+
+        <form id="rsvpForm" class="rsvp-form fade-in">
+
+          <div class="input-group">
+            <input type="text" id="name" required>
+            <label>ឈ្មោះពេញ</label>
+          </div>
+
+          <div class="input-group">
+            <input type="email" id="email" required>
+            <label>អុីមែល</label>
+          </div>
+
+          <div class="input-group">
+            <input type="tel" id="phone" required>
+            <label>លេខទូរស័ព្ទ</label>
+          </div>
+
+          <select id="guests" required>
+            <option value="">ចំនួនភ្ញៀវ</option>
+            <option value="1">1 នាក់</option>
+            <option value="2">2 នាក់</option>
+            <option value="3">3 នាក់</option>
+            <option value="4">4 នាក់</option>
+          </select>
+
+          <div class="attendance">
+            <label>
+              <input type="radio" name="attendance" value="yes" required>
+              ចូលរួម
+            </label>
+            <label>
+              <input type="radio" name="attendance" value="no">
+              មិនអាចចូលរួម
+            </label>
+          </div>
+
+          <textarea id="message" placeholder="សារជូនពរ (ជម្រើស)"></textarea>
+
+          <button type="submit" class="submit-btn">
+            ផ្ញើការបញ្ជាក់ 💍
+          </button>
+
+        </form>
+      </div>
+    </section>
+
+
+    <section id="footer"></section>
+
+  </div>
+  <div class="lightbox" id="lightbox">
+    <span class="close-btn" id="closeLightbox">&times;</span>
+    <img id="lightboxImg" src="" alt="">
+  </div>
+  <script src="script.js">s
+  </script>
+</body>
+</html>
