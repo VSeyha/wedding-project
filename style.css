@@ -112,6 +112,7 @@ html {
 
 /* ===== HOME SECTION ===== */
 #home {
+  margin-top: 50px;
   position: relative;
   height: 100vh;
   background: url("assets/bg-image.png") center/cover no-repeat;
